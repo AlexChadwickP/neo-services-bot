@@ -3,12 +3,12 @@ import os
 import discord
 import pymongo
 
-client = pymongo.MongoClient("mongodb+srv://root:n00dles2003@bugtracker.kcina.mongodb.net/Neocommissions?retryWrites=true&w=majority")
+mongoURI = os.environ.get('MONGO_URI')
+client = pymongo.MongoClient(mongoURI)
 db = client["NeoCommissions"]
 freelance_connection = db["Freelancer"]
 commission_connection = db["Commission"]
 
-load_dotenv()
 TOKEN = os.environ.get('DISCORD_TOKEN')
 
 client = discord.Client()
