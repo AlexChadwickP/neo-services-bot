@@ -10,7 +10,7 @@ freelance_connection = db["Freelancer"]
 commission_connection = db["Commission"]
 
 load_dotenv()
-TOKEN = os.getenv('DISCORD_TOKEN')
+TOKEN = os.environ.get('DISCORD_TOKEN')
 
 client = discord.Client()
 
