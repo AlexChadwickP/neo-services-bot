@@ -1,7 +1,6 @@
 import os
 
 import discord
-from dotenv import load_dotenv
 import pymongo
 
 client = pymongo.MongoClient("mongodb+srv://root:n00dles2003@bugtracker.kcina.mongodb.net/Neocommissions?retryWrites=true&w=majority")
